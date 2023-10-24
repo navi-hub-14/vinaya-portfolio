@@ -32,20 +32,29 @@
     justify-content: right;
     backdrop-filter: blur(5px);
     position: fixed;
-    z-index: 2;
+    z-index: 1;
 }
 .navbar ul{
     /* position: relative; */
     display: flex;
+        padding-right: 35px
+
 }
 .navbar ul li a{
     text-decoration: none;
     color: white;
+    padding-inline: 15px;
     
 }
 .navbar li{
     list-style: none;
-    padding-inline: 35px;
+}
+.navbar ul li a:hover{
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+}
+{
 }
 /* <!--  Home --> */
 #Home{
@@ -286,9 +295,7 @@ box-shadow: inset 3px 3px 20px rgb(122, 58, 58);
 
 @media  (max-width: 1200px){
     /* navbar */
-    .navbar li{
-        padding-inline: 20px;
-    }
+   
     /* Home */
     .text1{
         font-size: 4rem;
@@ -351,12 +358,10 @@ box-shadow: inset 3px 3px 20px rgb(122, 58, 58);
 .navbar .navlist {
     margin: 0;
     padding: 0;
-    right: 200px;
     } 
-    .navbar .navlist li{
+    .navbar .navlist li a{
         padding-inline: 8px;
         font-size: 6pt;
-        width: auto;
     }
    
     /* Home */
