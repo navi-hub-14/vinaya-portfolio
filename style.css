@@ -1,0 +1,420 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+
+    /* border: 1px solid rgb(0, 0, 0); */
+}
+
+
+#Home{
+    height: 100vh;
+}
+#Home, #Skills, #Works, #Journey, #About{
+    text-align: center;
+    padding-block: 100px;
+}
+#Skills h1, #Works h1{
+    font-size: 50px;
+    font-weight: bolder;
+}
+/* Navbar */
+
+.navbar{
+    background: linear-gradient(180deg, black, rgba(0, 0, 0, 0.009) );
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    backdrop-filter: blur(5px);
+    position: fixed;
+    z-index: 2;
+}
+.navbar ul{
+    /* position: relative; */
+    display: flex;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    
+}
+.navbar li{
+    list-style: none;
+    padding-inline: 35px;
+}
+/* <!--  Home --> */
+#Home{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background: url(assets/images/nature-6397169_1280.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:bottom;
+}
+/*  */
+#Home .row{
+    border:none;
+    background-color: rgba(245, 222, 179, 0.465);
+    backdrop-filter: blur(5px);
+    box-shadow: inset 5px 5px 10px rgb(229, 226, 226) ,inset -5px -5px 10px rgb(255, 255, 255);
+    border-radius: 50px;
+    position: absolute;
+    margin: 100px 10px;
+    padding: 50px;
+    top: 0;
+}
+#Home .row *{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home img{
+   
+    mix-blend-mode:luminosity;
+    filter:opacity(0.8);
+    border: none;
+    border-radius: 50%;
+    height: 200px;
+    box-shadow:  5px 5px 15px black;
+}
+.text1{
+    
+    font-family: 'Sacramento', cursive;
+    font-size: 50pt;
+    font-weight:bolder;
+}
+.text2{
+   
+    text-align: center;
+    font-size: 18pt;
+    font-weight: 600;
+}
+
+
+/* <!-- AboutMe --> */
+#About{
+    background:#F5F5DC;
+}
+.hide{
+    visibility : hidden;
+    height: 0;
+}
+/* <!-- My Journey --> */
+#Journey{
+    height: auto;
+}
+#Journey .container{
+    width: 60%;
+}
+.journey{
+    background-color: white;
+    cursor: pointer;
+    box-shadow: inset -2px -3px 10px rgb(93, 88, 88);
+    border-radius: 8px ;
+}
+.journey:focus + .hide { 
+    visibility:visible ;
+    height: auto;
+}
+.journey:focus + .hide:focus{
+    visibility: hidden;
+}
+#Journey span{
+    text-transform: capitalize;
+    color:rgb(189, 3, 3);
+    font-family: cursive;
+}
+#Journey .row{
+    padding:10px;
+    margin: auto;
+}
+#Journey .row div p{
+    text-align: left;
+    padding-top:10px ;
+    font-size: 16px;
+
+}
+#Journey .row img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    margin-top:20px;
+}
+#Journey .row .col-last, .last{
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+#Journey .row .col-last img{
+    margin: auto;
+}
+#Journey .row .last{
+    height: 80px;
+}
+#Journey .row .last p{
+    text-align: center;
+    font-size: 20px;
+}
+#Journey .row *:not(p,span){
+    align-items: center;
+    justify-content: left;
+    background-color: rgba(209, 192, 192, 0.703);
+    border-radius: 10px;
+}
+
+
+/* <!-- Skills --> */
+#Skills{
+    background:#FFB000;
+}
+
+#Skills .webdev{
+    background-color: rgba(171, 12, 12, 0.75);
+    color: rgb(255, 228, 196);
+}
+#Skills .multimedia{
+    background-color: rgba(255, 228, 196, 0.583);
+    
+}
+#Skills .container{
+    display: flex;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 50px;
+    
+}
+#Skills .skill ul{
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 20px 50px 50px 50px;
+    filter: drop-shadow(3px 4px 10px white)
+}
+#Skills ul li{
+    list-style: none;
+    text-align: left;
+    padding: 10px;
+}
+#Skills .title{
+    padding-block: 20px;
+    font-size: 20pt;
+}
+/* <!-- Works --> */
+#Works{
+    background:#FFCF9D;
+
+}
+#Works *:not(.overlay, .overlay-text){
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+}
+#Works .contain{
+    padding: 10px;
+    width: 70%;
+    margin: auto;
+}
+#Works .row .right img {
+    float:right;
+    margin-right: 130px;
+}
+#Works .row .left img{
+    float: left;
+    margin-left: 130px;
+}
+#Works .row img{
+position: relative;
+padding: 0;
+box-shadow: inset 3px 3px 20px rgb(122, 58, 58);
+    margin-inline: 20px;
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: left;
+}
+
+#Works .row a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+#Works .overlay{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+   border-radius: 20px;
+   padding-bottom: 15px;
+    opacity: 0;
+    box-shadow:inset 3px 3px 20px rgb(122, 58, 58),
+                -3px -3px 20px black;
+
+    background-color: rgba(255, 102, 0, 0.254);
+    transition: all 0.5s ease-in-out;
+}
+#Works .overlay:hover{
+    opacity: 1;
+}
+#Works .overlay-text{
+    color: rgb(255, 255, 255);
+    width: 100%;
+    background: linear-gradient(90deg, black, rgb(255, 102, 0), black)
+}
+
+
+/* <!-- Footer --> */
+#Footer{
+    height: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+@media  (max-width: 1200px){
+    /* navbar */
+    .navbar li{
+        padding-inline: 20px;
+    }
+    /* Home */
+    .text1{
+        font-size: 4rem;
+    }
+
+    /* Journey */
+    #Journey .container{
+        width: 90%;
+    }
+    #Journey .row p{
+        font-size: small;
+    }
+    #Journey .row img{
+        height: 80px;
+        width: 80px;
+       
+    }
+    #Journey .row .col-last{
+    height: auto;
+    }
+
+    /* Skills */
+    #Skills{
+        height: auto;
+    }
+    #Skills .container{
+        padding: 0;
+    }
+    #Skills .list{
+        /* flex-shrink: 0; */
+        padding-block: 0px;
+    }
+    #Skills ul li{
+        padding: 5px;
+    }
+    #Skills .title{
+        font-size: 20pt;
+    }
+
+    /* Work */
+    #Works .row .left img {
+        float: unset;
+        margin-inline: 20px;
+    }
+    #Works .row .right img {
+        float: unset;
+        margin-inline: 20px;
+    }
+    #Works .contain{
+        border:unset;
+        width: 95%;
+    }
+    /* Footer */
+ 
+}
+@media  (max-width: 550px){
+  .navbar{
+    height: auto;
+  }
+.navbar .navlist {
+    margin: 0;
+    padding: 0;
+    right: 200px;
+    } 
+    .navbar .navlist li{
+        padding-inline: 8px;
+        font-size: 6pt;
+        width: auto;
+    }
+   
+    /* Home */
+    #Home img{
+        height: 150px;
+    }
+    #Home .home{
+        width: 90%;
+    }
+    .text1{
+        font-size: 2rem;
+    }
+    .text2{
+        font-size: 1.1rem;
+    }
+
+    /* About */
+    /* Journey */
+    #Journey .row div p{
+        font-size: 12px;
+    }
+    #Journey .row img{
+        height: 60px;
+        width: 60px;
+       
+    }
+    #Journey .row .last p{
+        font-size: 12pt;
+    }
+    /* Skills */
+    #Skills{
+        height: auto;
+    }
+    #Skills .container{
+        flex-direction: column;
+        font-size: larger;
+    }   
+    #Skills ul{
+        padding: 20px;
+    }
+    #Skills .title{
+        font-size: 20pt;
+    }
+
+    /* Work */
+    
+    #Works .row img{
+        height: 95px;
+        width: 95px;
+        margin-block: 10px;
+    }
+    #Works .row *{
+        padding:0;
+        margin: auto;
+    }
+    
+    /* Footer */
+ #Footer{
+    font-size: 10pt;
+ }
+}
