@@ -267,7 +267,7 @@ box-shadow: inset 3px 3px 20px rgb(122, 58, 58);
     top: 0; left: 0;
    border-radius: 20px;
    padding-bottom: 15px;
-    opacity: 0;
+    opacity: 0.7;
     box-shadow:inset 3px 3px 20px rgb(122, 58, 58),
                 -3px -3px 20px black;
 
