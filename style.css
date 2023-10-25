@@ -480,6 +480,9 @@ a {
     }
 
     /* Work */
+    #Works{
+        height: auto;
+    }
     #Works .row .left img {
         float: unset;
         margin-inline: 20px;
@@ -496,6 +499,7 @@ a {
     }
 
     /* Contact */
+    
     #Contact .container{
         width: 70%;
     }
@@ -590,8 +594,11 @@ a {
         font-size: 1rem;
     }
 /* Contact */
+#Contact .row{
+    width: 90%;
+}
     #Contact em{
-        font-size: 15px;
+        font-size: 12px;
     }
     /* Footer */
     #Footer {
