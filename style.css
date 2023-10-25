@@ -8,7 +8,7 @@
 }
 
 
-#Home, #Works{
+#Home{
     height: 100vh;
 }
 
@@ -480,9 +480,7 @@ a {
     }
 
     /* Work */
-    #Works{
-        height: auto;
-    }
+   
     #Works .row .left img {
         float: unset;
         margin-inline: 20px;
