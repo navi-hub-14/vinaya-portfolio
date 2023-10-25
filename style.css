@@ -4,7 +4,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
-    /* border: 1px solid rgb(0, 0, 0); */
+    /* border: 1px solid rgb(255, 255, 255); */
 }
 
 
@@ -417,10 +417,13 @@ a {
 
 /* <!-- Footer --> */
 #Footer {
-    height: 50px;
+    display: flex;
+    height: 10vh;
     background-color: black;
     color: white;
     text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (max-width: 1200px) {
