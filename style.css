@@ -1,30 +1,36 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
-
     /* border: 1px solid rgb(0, 0, 0); */
 }
 
 
-#Home{
+#Home, #Contact {
     height: 100vh;
 }
-#Home, #Skills, #Works, #Journey, #About{
-    text-align: center;
+
+
+.tag {
+    animation: fadeIn 0.5s linear;
+    transition: all 1s linear;text-align: center;
     padding-block: 100px;
-}
-#Skills h1, #Works h1{
+    letter-spacing: 1px;
+  }
+
+.tag h1 {
     font-size: 50px;
     font-weight: bolder;
 }
+.tag h2{
+    font-size: 40px;
+}
 /* Navbar */
 
-.navbar{
-    background: linear-gradient(180deg, black, rgba(0, 0, 0, 0.009) );
+.navbar {
+    background: linear-gradient(180deg, black, rgba(0, 0, 0, 0.009));
     width: 100vw;
     height: 60px;
     display: flex;
@@ -34,71 +40,86 @@
     position: fixed;
     z-index: 1;
 }
-.navbar ul{
+
+.navbar ul {
     /* position: relative; */
     display: flex;
-        padding-right: 35px
+    padding-right: 45px;
 
 }
-.navbar ul li a{
+
+.navbar ul li a {
     text-decoration: none;
     color: white;
     padding-inline: 15px;
-    
+
 }
-.navbar li{
+
+.navbar li {
     list-style: none;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
-.navbar ul li a:hover{
+
+.navbar ul li a:hover {
     border-radius: 10px;
     background-color: white;
     color: black;
 }
 
 /* <!--  Home --> */
-#Home{
+#Home {
     display: flex;
     text-align: center;
     justify-content: center;
     background: url(assets/images/nature-6397169_1280.webp);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position:bottom;
+    background-position: bottom;
+
 }
+
 /*  */
-#Home .row{
-    border:none;
+#Home .row {
+    border: none;
     background-color: rgba(245, 222, 179, 0.465);
     backdrop-filter: blur(5px);
-    box-shadow: inset 5px 5px 10px rgb(229, 226, 226) ,inset -5px -5px 10px rgb(255, 255, 255);
+    box-shadow: inset 5px 5px 10px rgb(229, 226, 226), inset -5px -5px 10px rgb(255, 255, 255);
     border-radius: 50px;
     position: absolute;
     margin: 100px 10px;
     padding: 50px;
     top: 0;
 }
-#Home .row *{
+
+#Home .row * {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.home img{
-   
-    mix-blend-mode:luminosity;
-    filter:opacity(0.8);
+
+.home img {
+
+    mix-blend-mode:hard-light;
+    filter: drop-shadow(5px 5px 15px rgb(156, 156, 3)) opacity(0.7);
+    padding: 5px;
+    background:rgb(245, 245, 171);
     border: none;
     border-radius: 50%;
     height: 200px;
-    box-shadow:  5px 5px 15px black;
+ 
 }
-.text1{
-    
+
+.text1 {
+
     font-family: 'Sacramento', cursive;
     font-size: 50pt;
-    font-weight:bolder;
+    font-weight: bolder;
+    padding: 20px;
 }
-.text2{
-   
+
+.text2 {
+
     text-align: center;
     font-size: 18pt;
     font-weight: 600;
@@ -106,73 +127,97 @@
 
 
 /* <!-- AboutMe --> */
-#About{
-    background:#F5F5DC;
+#About {
+    background: #F5F5DC;
 }
-.hide{
-    visibility : hidden;
+
+.hide {
+    visibility: hidden;
     height: 0;
 }
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+}
 /* <!-- My Journey --> */
-#Journey{
+#Journey {
     height: auto;
 }
-#Journey .container{
+
+#Journey .container {
     width: 60%;
 }
-.journey{
+
+.journey {
     background-color: white;
     cursor: pointer;
     box-shadow: inset -2px -3px 10px rgb(93, 88, 88);
-    border-radius: 8px ;
+    border-radius: 8px;
+    border: none;
+
 }
-.journey:focus + .hide { 
-    visibility:visible ;
+
+.journey:focus+.hide {
+    visibility: visible;
     height: auto;
+    animation: fadeIn 1s ease-in-out;
+
 }
-.journey:focus + .hide:focus{
+
+.journey:focus+.hide:focus {
     visibility: hidden;
+
 }
-#Journey span{
+
+#Journey span {
     text-transform: capitalize;
-    color:rgb(189, 3, 3);
-    font-family: cursive;
+    color: rgb(189, 3, 3);
+    font-size: 16.5px;
 }
-#Journey .row{
-    padding:10px;
+
+#Journey .row {
+    padding: 10px;
     margin: auto;
 }
-#Journey .row div p{
+
+#Journey .row div p {
     text-align: left;
-    padding-top:10px ;
+    padding-top: 10px;
     font-size: 16px;
 
 }
-#Journey .row img{
+
+#Journey .row img {
     height: 100px;
     width: 100px;
     border-radius: 50%;
     object-fit: cover;
     object-position: top;
-    margin-top:20px;
+    margin-top: 20px;
 }
-#Journey .row .col-last, .last{
+
+#Journey .row .col-last,
+.last {
     display: flex;
     height: 100px;
     align-items: center;
     justify-content: center;
 }
-#Journey .row .col-last img{
+
+#Journey .row .col-last img {
     margin: auto;
 }
-#Journey .row .last{
+
+#Journey .row .last {
     height: 80px;
 }
-#Journey .row .last p{
+
+#Journey .row .last p {
     text-align: center;
     font-size: 20px;
 }
-#Journey .row *:not(p,span){
+
+#Journey .row *:not(p, span) {
     align-items: center;
     justify-content: left;
     background-color: rgba(209, 192, 192, 0.703);
@@ -181,68 +226,79 @@
 
 
 /* <!-- Skills --> */
-#Skills{
-    background:#FFB000;
+#Skills {
+    background: #FFB000;
 }
 
-#Skills .webdev{
+#Skills .webdev {
     background-color: rgba(171, 12, 12, 0.75);
     color: rgb(255, 228, 196);
 }
-#Skills .multimedia{
+
+#Skills .multimedia {
     background-color: rgba(255, 228, 196, 0.583);
-    
+
 }
-#Skills .container{
+
+#Skills .container {
     display: flex;
     text-transform: uppercase;
     font-weight: bold;
     padding: 50px;
-    
+
 }
-#Skills .skill ul{
+
+#Skills .skill ul {
     margin: auto;
     margin-top: 10px;
     border-radius: 20px;
     padding: 20px 50px 50px 50px;
     filter: drop-shadow(3px 4px 10px white)
 }
-#Skills ul li{
+
+#Skills ul li {
     list-style: none;
     text-align: left;
     padding: 10px;
 }
-#Skills .title{
+
+#Skills .title {
     padding-block: 20px;
     font-size: 20pt;
 }
+
 /* <!-- Works --> */
-#Works{
-    background:#FFCF9D;
+#Works {
+    background: #FFCF9D;
 
 }
-#Works *:not(.overlay, .overlay-text){
+
+#Works *:not(.overlay, .overlay-text) {
     position: relative;
     padding: 10px;
     border-radius: 10px;
 }
-#Works .contain{
+
+#Works .contain {
     padding: 10px;
     width: 70%;
     margin: auto;
 }
+
 #Works .row .right img {
-    float:right;
+    float: right;
     margin-right: 130px;
 }
-#Works .row .left img{
+
+#Works .row .left img {
     float: left;
     margin-left: 130px;
 }
-#Works .row img{
-position: relative;
-padding: 0;
-box-shadow: inset 3px 3px 20px rgb(122, 58, 58);
+
+#Works .row img {
+    position: relative;
+    padding: 0;
+    box-shadow: inset 3px 3px 20px rgb(122, 58, 58);
     margin-inline: 20px;
     height: 200px;
     width: 200px;
@@ -251,33 +307,37 @@ box-shadow: inset 3px 3px 20px rgb(122, 58, 58);
     object-position: left;
 }
 
-#Works .row a{
+#Works .row a {
     display: block;
     width: 100%;
     height: 100%;
     text-decoration: none;
 }
-#Works .overlay{
+
+#Works .overlay {
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
-    top: 0; left: 0;
-   border-radius: 20px;
-   padding-bottom: 15px;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    padding-bottom: 15px;
     opacity: 0.7;
-    box-shadow:inset 3px 3px 20px rgb(122, 58, 58),
-                -3px -3px 20px black;
+    box-shadow: inset 3px 3px 20px rgb(122, 58, 58),
+        -3px -3px 20px black;
 
     background-color: rgba(255, 102, 0, 0.254);
     transition: all 0.5s ease-in-out;
 }
-#Works .overlay:hover{
+
+#Works .overlay:hover {
     opacity: 1;
 }
-#Works .overlay-text{
+
+#Works .overlay-text {
     color: rgb(255, 255, 255);
     width: 100%;
     background: linear-gradient(90deg, black, rgb(255, 102, 0), black)
@@ -285,52 +345,63 @@ box-shadow: inset 3px 3px 20px rgb(122, 58, 58);
 
 
 /* <!-- Footer --> */
-#Footer{
+#Footer {
     height: 50px;
     background-color: black;
     color: white;
     text-align: center;
 }
 
-@media  (max-width: 1200px){
+@media (max-width: 1200px) {
+
     /* navbar */
-   
+    .navbar .navlist li a {
+        font-size: 10pt;
+    }
+
     /* Home */
-    .text1{
+    .text1 {
         font-size: 4rem;
     }
 
     /* Journey */
-    #Journey .container{
+    #Journey .container {
         width: 90%;
     }
-    #Journey .row p{
+
+    #Journey .row p {
         font-size: small;
     }
-    #Journey .row img{
+
+    #Journey .row img {
         height: 80px;
         width: 80px;
-       
+
     }
-    #Journey .row .col-last{
-    height: auto;
+
+    #Journey .row .col-last {
+        height: auto;
     }
 
     /* Skills */
-    #Skills{
+    #Skills {
         height: auto;
     }
-    #Skills .container{
+
+    #Skills .container {
         padding: 0;
     }
-    #Skills .list{
+
+    #Skills .list {
         /* flex-shrink: 0; */
         padding-block: 0px;
     }
-    #Skills ul li{
+
+    #Skills ul li {
         padding: 5px;
     }
-    #Skills .title{
+
+    #Skills .title {
         font-size: 20pt;
     }
 
@@ -339,86 +410,104 @@ box-shadow: inset 3px 3px 20px rgb(122, 58, 58);
         float: unset;
         margin-inline: 20px;
     }
+
     #Works .row .right img {
         float: unset;
         margin-inline: 20px;
     }
-    #Works .contain{
-        border:unset;
+
+    #Works .contain {
+        border: unset;
         width: 95%;
     }
+
     /* Footer */
- 
+
 }
-@media  (max-width: 550px){
-  .navbar{
-    height: auto;
-  }
-.navbar .navlist {
-    margin: 0;
-    padding: 0;
-    } 
-    .navbar .navlist li a{
-        padding-inline: 8px;
-        font-size: 6pt;
+
+@media (max-width: 550px) {
+    .navbar {
+        height: auto;
+        justify-content: center;
+
     }
-   
+
+    .navbar .navlist {
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar .navlist li a {
+        padding-inline: 8px;
+        font-size: 8pt;
+    }
+
     /* Home */
-    #Home img{
+    #Home img {
         height: 150px;
     }
-    #Home .home{
+
+    #Home .home {
         width: 90%;
     }
-    .text1{
-        font-size: 2rem;
+
+    .text1 {
+        font-size: 2.5rem;
     }
-    .text2{
+
+    .text2 {
         font-size: 1.1rem;
     }
 
     /* About */
     /* Journey */
-    #Journey .row div p{
+    #Journey .row div p {
         font-size: 12px;
     }
-    #Journey .row img{
+
+    #Journey .row img {
         height: 60px;
         width: 60px;
-       
+
     }
-    #Journey .row .last p{
+
+    #Journey .row .last p {
         font-size: 12pt;
     }
+
     /* Skills */
-    #Skills{
+    #Skills {
         height: auto;
     }
-    #Skills .container{
+
+    #Skills .container {
         flex-direction: column;
         font-size: larger;
-    }   
-    #Skills ul{
+    }
+
+    #Skills ul {
         padding: 20px;
     }
-    #Skills .title{
+
+    #Skills .title {
         font-size: 20pt;
     }
 
     /* Work */
-    
-    #Works .row img{
+
+    #Works .row img {
         height: 95px;
         width: 95px;
         margin-block: 10px;
     }
-    #Works .row *{
-        padding:0;
+
+    #Works .row * {
+        padding: 0;
         margin: auto;
     }
-    
+
     /* Footer */
- #Footer{
-    font-size: 10pt;
- }
+    #Footer {
+        font-size: 10pt;
+    }
 }
