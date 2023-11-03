@@ -44,7 +44,6 @@
 }
 
 .navbar ul {
-    /* position: relative; */
     display: flex;
     padding-right: 45px;
 
@@ -74,7 +73,7 @@
     display: flex;
     text-align: center;
     justify-content: center;
-    background: url(assets/images/nature-6397169_1280.webp);
+    background: url(assets/images/colorful-2174045_640.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -102,16 +101,22 @@
 
 .home img {
 
-    mix-blend-mode: luminosity;
-    filter: drop-shadow(5px 5px 15px rgb(156, 156, 3)) opacity(0.8);
+    mix-blend-mode: multiply;
     padding: 5px;
-    background: rgb(245, 245, 171);
+    /* background: rgb(245, 245, 171); */
     border: none;
     border-radius: 50%;
     height: 200px;
 
 }
-
+.pfimage{
+    /* background: rgba(255, 255, 255, 0.109); */
+    border-radius: 50%;
+    box-shadow: inset 10px 10px 35px black, inset -10px -10px 35px black, 2px 3px 15px black;
+    width: 190px;
+    height: 190px;
+margin: auto;
+}
 .text1 {
 
     font-family: 'Sacramento', cursive;
@@ -330,29 +335,26 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
+    bottom: 0;
     border-radius: 20px;
     padding-bottom: 15px;
-    opacity: 0.7;
-    box-shadow: inset 3px 3px 20px rgb(122, 58, 58),
-        -3px -3px 20px black;
+    box-shadow: inset 3px 3px 8px rgb(122, 58, 58), -3px -3px 8px black;
 
     background-color: rgba(255, 102, 0, 0.254);
     transition: all 0.5s ease-in-out;
 }
 
-#Works .overlay:hover {
-    opacity: 1;
-}
+
 
 #Works .overlay-text {
+    position: relative;
     color: rgb(255, 255, 255);
     font-size: 1.5rem;
     width: 100%;
     background: linear-gradient(-45deg, black, rgb(255, 102, 0), black);
     background-size: 400% 400%;
     animation: gradient 5s ease-in-out infinite;
+    border-radius: 50px;
 }
 
 /* contact */
