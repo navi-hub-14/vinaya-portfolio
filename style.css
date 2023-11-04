@@ -8,7 +8,7 @@
 }
 
 
-#Home{
+#Home {
     height: 100vh;
 }
 
@@ -109,14 +109,16 @@
     height: 200px;
 
 }
-.pfimage{
+
+.pfimage {
     /* background: rgba(255, 255, 255, 0.109); */
     border-radius: 50%;
     box-shadow: inset 10px 10px 35px black, inset -10px -10px 35px black, 2px 3px 15px black;
     width: 190px;
     height: 190px;
-margin: auto;
+    margin: auto;
 }
+
 .text1 {
 
     font-family: 'Sacramento', cursive;
@@ -259,10 +261,14 @@ margin: auto;
     text-transform: uppercase;
     font-weight: bold;
     padding: 50px;
-
+    align-items: center;
+    justify-content: center;
+    width: 50%;
 }
 
 #Skills .skill ul {
+    display: flex;
+    flex-direction: column;
     margin: auto;
     margin-top: 10px;
     border-radius: 20px;
@@ -405,16 +411,18 @@ a {
     animation: gradient 5s ease-in-out infinite;
 }
 
-@keyframes gradient{
+@keyframes gradient {
     0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* <!-- Footer --> */
@@ -466,6 +474,7 @@ a {
 
     #Skills .container {
         padding: 0;
+        width: 90%;
     }
 
     #Skills .list {
@@ -482,7 +491,7 @@ a {
     }
 
     /* Work */
-   
+
     #Works .row .left img {
         float: unset;
         margin-inline: 20px;
@@ -499,11 +508,12 @@ a {
     }
 
     /* Contact */
-    
-    #Contact .container{
+
+    #Contact .container {
         width: 70%;
     }
-    #Contact em{
+
+    #Contact em {
         font-size: 12px;
     }
 
@@ -531,8 +541,14 @@ a {
         height: 150px;
     }
 
+
     #Home .home {
         width: 90%;
+    }
+
+    .pfimage {
+        width: 140px;
+        height: 140px;
     }
 
     .text1 {
@@ -548,7 +564,10 @@ a {
     #Journey .row div p {
         font-size: 12px;
     }
-
+    .journey h2{
+        font-size: 25px;
+        font-weight: 700;
+    }
     #Journey .row img {
         height: 60px;
         width: 60px;
@@ -566,7 +585,7 @@ a {
 
     #Skills .container {
         flex-direction: column;
-        font-size: larger;
+        font-size: small;
     }
 
     #Skills ul {
@@ -574,7 +593,7 @@ a {
     }
 
     #Skills .title {
-        font-size: 20pt;
+        font-size: 16pt;
     }
 
     /* Work */
@@ -593,13 +612,16 @@ a {
     #Works .overlay-text {
         font-size: 1rem;
     }
-/* Contact */
-#Contact .row{
-    width: 90%;
-}
-    #Contact em{
+
+    /* Contact */
+    #Contact .row {
+        width: 90%;
+    }
+
+    #Contact em {
         font-size: 12px;
     }
+
     /* Footer */
     #Footer {
         font-size: 10pt;
